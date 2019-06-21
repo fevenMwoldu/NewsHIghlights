@@ -1,0 +1,24 @@
+watchlist/
+|
+git 
+|
+app/
+    |-app/static/ # Stores all static files CSS,Javascript ,Images
+    |
+    |-app/templates/ # Stores all our template files.
+    |
+    |-app/__init__.py # Where we will initialize our application.
+    |
+    |-app/views.py # Where we will create all our view functions.
+    |
+    |-app/error.py # Where we will create handlers for error pages.
+    |
+    |-app/config.py # Where we will store our app configurations.
+|
+virtual/ # Our virtual Environment
+|
+.gitignore
+|
+README.md
+|
+run.py # File that will run our application
