@@ -1,0 +1,61 @@
+==Page 1) Homepage - News Sources
+
+url = 'https://newsapi.org/v2/sources?apiKey={0}'.format(key)
+
+https://newsapi.org/v2/sources?apiKey=48ae97af8c28489e909f77a795e8ced9
+
+{
+    "status": "ok",
+    -"sources": [
+        -{
+            "id": "abc-news",
+            "name": "ABC News",
+            "description": "Your trusted source for breaking news, analysis, exclusive interviews, headlines, and videos at ABCNews.com.",
+            "url": "https://abcnews.go.com",
+            "category": "general",
+            "language": "en",
+            "country": "us"
+        }
+    ]
+}
+
+List of News Sources( display "name" and link using "id" ): 
+    * CNN    <a href="{{ /articles?source=bbc-news }}">BBC News</a>
+    * BBC
+    * CNBC
+    * ...
+
+==Page 2) Articles page - User selected new sources "BBC"
+
+url = 'https://newsapi.org/v2/top-headlines?sources={0}&apiKey={1}'.format(source, key)
+
+https://newsapi.org/v2/top-headlines?sources=bbc-news&apiKey=48ae97af8c28489e909f77a795e8ced9
+
+{
+    "status": "ok",
+    "totalResults": 10,
+    -"articles": [
+        -{
+            -"source": {
+                "id": "bbc-news",
+                "name": "BBC News"
+            },
+            "author": "BBC News",
+            "title": "US suspends Malawi diplomats' visa privileges",
+            "description": "The move comes after an official failed to pay $1.1m in damages to a woman trafficked into the US.",
+            "url": "http://www.bbc.co.uk/news/world-africa-48724294",
+            "urlToImage": "https://ichef.bbci.co.uk/news/1024/branded_news/1A16/production/_107487660_gettyimages-583809478-594x594.jpg",
+            "publishedAt": "2019-06-21T17:41:35Z",
+            "content": "Image copyrightGetty ImagesImage caption\r\n A former domestic worker at Malawi's US embassy was awarded $1.1m in damages following a human trafficking lawsuit\r\nThe US has suspended visas for domestic workers of Malawian diplomats after an official failed to pa… [+2219 chars]"
+        }
+    ]
+}
+
+List of Articles (Image, Description, Time, URL of Article) from "BBC":
+    * Image1, News1, Time1 ... <a target="_blank" href="http://www.bbc.co.uk/news/world-africa-48724294"> ... </a>
+    * Image2, News2, Time2
+    * Image3, News3, Time3
+    * ...
+
+== User clicks on an Article (for example: News1)
+    * Open www.bbc.com/News1 in a new tab
