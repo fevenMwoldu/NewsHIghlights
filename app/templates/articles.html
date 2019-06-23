@@ -7,23 +7,28 @@
 </head>
 
 <body>
-    <table style="width:100%" border="2px">
-        <tr>
-            <th>Image</th>
-            <th>Description</th>
-            <th>Published Date</th>
 
-        </tr>
-        {% for article in articles %}
-        <tr>
-            <td>
-                <img src="{{ article['urlToImage'] }}" alt="no image" height=50px width=50px>
-            </td>
-            <td>{{ article['description'] }}</td>
-            <td>{{ article['publishedAt'] }}</td>
-        </tr>
-        {% endfor %}
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Image</th>
+                <th>Description</th>
+                <th>Published Date</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for article in articles %}
+            <tr>
+                <td><img src="{{ article['urlToImage'] }}" alt="no image" height=200px width=250px></td>
+                <td>{{ article['description'] }}</td>
+                <td>{{ article['publishedAt'] }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
     </table>
+
+
 </body>
 
 </html>
