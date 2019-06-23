@@ -12,7 +12,7 @@
         {% for source in sources%}
         <tr>
             <td>
-                <a href="{{ url_for('articles', source_id=source['id']) }}">
+                <a href="{{ url_for('main.articles', source_id=source['id']) }}">
                     <h2>{{source.name}}</h2>
                 </a>
             </td>

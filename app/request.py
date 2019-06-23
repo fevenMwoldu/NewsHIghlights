@@ -16,16 +16,14 @@ from .models import Source,Article
 sources_url = None
 # Getting the movie base url
 articles_url = None
+# Getting api key
+api_key = None
 
 def configure_request(app):
-    global sources_url,articles_url
+    global sources_url,articles_url,api_key
     sources_url = app.config["SOURCES_API_URL"]
     articles_url = app.config["ARTICLES_API_URL"]
-
-
-
-
-
+    api_key = app.config["NEWS_API_KEY"]
 
 
 def get_news_sources():
