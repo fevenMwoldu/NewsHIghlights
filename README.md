@@ -33,7 +33,7 @@ Visual Studio Code
 Ubuntu
 
 ## Live Link
-https://github.com/fevenMwoldu/NewsHIghlights
+https://listof-news-hightlights.herokuapp.com/
 
 ## Support and contact details
 Your feedback is welcome at Feven Weldu feven.m.weldu@gmail.com
@@ -41,4 +41,5 @@ Your feedback is welcome at Feven Weldu feven.m.weldu@gmail.com
 Contributions are also encouraged. Fork the GitHub repository to your own space, make your changes and send a pull request.
 
 ## Link to the License
+
 https://github.com/fevenMwoldu/NewsHIghlights/community/license/new?branch=master&template=mit
