@@ -1,33 +1,24 @@
-<!DOCTYPE html>
-<html>
+{% extends 'base.html'%} {% block content %}
+<table class="table" align="center">
+    <thead>
+        <tr>
+            <th>
+                <h1>News Sources</h1>
+            </th>
 
-<head>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
-</head>
+        </tr>
+    </thead>
+    <tbody>
+        {% for source in sources%}
+        <tr>
+            <td>
+                <a href="{{ url_for('articles', source_id=source['id']) }}">
+                    <h2>{{source.name}}</h2>
+                </a>
+            </td>
 
-<body>
-
-
-    <table style="width:100%" border="8px">
-        <thead>
-            <tr>
-                <th>News Sources</th>
-
-            </tr>
-        </thead>
-        <tbody>
-            {% for source in sources%}
-            <tr>
-
-                <td>
-                    <a href="{{ url_for('articles', source_id=source['id']) }}">{{source.name}}</a>
-                </td>
-
-            </tr>
-            {% endfor %}
-        </tbody>
-    </table>
-</body>
-
-</html>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}
