@@ -2,15 +2,30 @@
 <html>
 
 <head>
-    <meta charset="utf-8"> {% if title %}
-    <title> {{ title }}</title>
-    {% else %}
-    <title> Welcome to the best News Highlights website </title>
-    {% endif %}
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 </head>
 
 <body>
+    <table style="width:100%" border="2px">
+        <thead>
+            <tr>
+                <th>News Sources</th>
 
+            </tr>
+        </thead>
+        <tbody>
+            {% for source in sources%}
+            <tr>
+
+                <td>
+                    <a href="{{ url_for('articles', source_id=source['id']) }}">{{source.name}}</a>
+                </td>
+
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
 </body>
 
 </html>
