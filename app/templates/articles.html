@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <table style="width:100%" border="2px">
+        <tr>
+            <th>Image</th>
+            <th>Description</th>
+            <th>Published Date</th>
+
+        </tr>
+        {% for article in articles %}
+        <tr>
+            <td>
+                <img src="{{ article['urlToImage'] }}" alt="no image" height=50px width=50px>
+            </td>
+            <td>{{ article['description'] }}</td>
+            <td>{{ article['publishedAt'] }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+
+</html>
